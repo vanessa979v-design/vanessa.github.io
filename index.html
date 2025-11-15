@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林書秀 個人履歷網頁</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {cursor: help; }
+        img {
+            float:left;
+            margin: 20px;
+        }
+        .profile-photo{
+            border-radius: 50%;
+            box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
+        }
+        .class01{
+            margin: 0.5cm 0cm 0cm 8.5cm;
+            
+        }
+        .card01{
+            text-align: center;
+            font-size: 25px;
+            max-width: 600px;
+            margin: 0 auto 50px auto; 
+            padding: 20px;
+            background-color: #e9f0e7; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        li{
+            margin:10px auto; 
+            font-family: 'Times New Roman', Times, serif;
+            width: 80%; 
+            max-width: 350px; 
+            height: 40px;
+            text-align: left;
+            line-height: 40px; 
+            background-color: rgb(185, 209, 187); 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 5px; 
+        }
+
+        li span {
+            padding-left: 10px; 
+            z-index: 2; 
+            position: relative; 
+            display: inline-block;
+            color:lightyellow; 
+            font-weight: bold;
+        }
+
+        li::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0; 
+            background-color: rgb(33, 98, 72); 
+            z-index: 1; 
+         }
+ 
+        .pro-java::before{
+        animation-name: bar1;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards; 
+        } 
+        @keyframes bar1{
+        form{width: 0;}
+        to{width: 30%;}
+        }
+        .pro-java::after{
+            content: "30%";
+            display: inline;
+            color:rgb(8, 68, 44);
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            z-index: 3;
+            line-height: 40px; 
+        }
+
+        .pro-html::before{
+        animation-name: bar2;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards; 
+        }
+        @keyframes bar2{
+            form{width: 0;}
+            to{width:75%;}
+        }
+        .pro-html::after{
+            content: "75%";
+            display: inline;
+            color: rgb(8, 68, 44);
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            z-index: 3;
+            line-height: 40px;
+        }
+        .pro-py::before{
+        animation-name: bar3;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards; 
+        }
+        @keyframes bar3{
+            form{width: 0;}
+            to{width: 50%;}
+        }
+        .pro-py::after{
+            content: "50%";
+            display: inline;
+            color: rgb(8, 68, 44);
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            z-index: 3;
+            line-height: 40px;
+        }
+        .pro-design::before{
+        animation-name: bar4;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards; 
+        }
+        @keyframes bar4{
+            form{width: 0;}
+            to{width: 90%;}
+        }
+        .pro-design::after{
+            content: "90%";
+            display: inline;
+            color: rgb(8, 68, 44);
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            right: 10px;
+            z-index: 3;
+            line-height: 40px;
+        }
+        
+        /* --- 新增/修改個人經歷與聯絡資訊的樣式 --- */
+        #experience, #callme {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            text-align: center;
+            border-top: 5px solid rgb(8, 68, 44);
+            background-color: #f7fceb; 
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #experience h1, #callme h1 {
+            color: rgb(8, 68, 44);
+            border-bottom: 2px dashed rgb(185, 209, 187);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        #callme a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: rgb(185, 209, 187);
+            color: rgb(8, 68, 44);
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #callme a:hover {
+            background-color: rgb(8, 68, 44);
+            color: white;
+        }
+    </style>
+ 
+</head>
+<body bgcolor=lightyellow>
+    <header>
+        <h1><b>My Website</b></h1>
+    </header>
+    <nav>
+        <a href="#me">&nbsp 個人基本資訊 &nbsp</a>
+        <a href="#myskill">&nbsp 興趣專業與技能 &nbsp</a>
+        <a href="#experience">&nbsp 個人經歷 &nbsp</a>
+        <a href="#callme">&nbsp 聯絡資訊 &nbsp</a>
+    </nav>
+<main>
+    <section id="me">
+        <img src="image/S__71311367.jpg" class="profile-photo" width="266.2" height="354.5">
+        <h1 class="class01">
+        <br>&nbsp姓名:林書秀
+        <br>&nbsp生日:2006/03/09
+        <br>&nbsp中原大學-資訊管理學系
+        <br><br>「當你覺得為時已晚，恰好是最早的時候」</h1>
+        <h3>&nbsp -永遠不要怕來不及，只要開始了你就會看到不一樣的自己
+        <br>大一時就讀商業設計系，後來由於未來就業的考量與原科系發展不同轉來資管，<br>我喜歡嘗試新事物，因此參加過很多社團並擔任幹部，學習方面也充滿轉折點。
+        </h3>
+    </section>
+
+    <br><br><hr color="rgb(8, 68, 44)">
+    <br><section class="card01" id="myskill">
+        <h1>興趣專業與技能</h1>
+            <h3>
+                <li class="pro-java"><span>Java</span></li>
+                <li class="pro-html"><span>Html</span></li>
+                <li class="pro-py"><span>Python</span></li>
+                <li class="pro-design"><span>平面設計</span></li>
+            </h3>
+        </section>
+
+        <br><br><hr color="rgb(8, 68, 44)">
+
+    <section id="experience">
+        <h1>個人經歷</h1>
+        <h2> 跨領域學習與精進 (商業設計/資訊管理)
+    於大一在商業設計系打下扎實的平面設計基礎、視覺溝通與軟體操作技能。
+    
+    大二成功轉入資訊管理系後，積極學習資訊系統分析、數據處理及專案管理等技術知識，拓展了技術視野。
+    
+    同步實踐與技能深化：
+    
+    在學習資管專業的同時，擔任熱舞社美宣職務，負責海報、文宣品、活動視覺設計等工作，持續精進並實戰應用平面設計能力。
+    
+    此經歷展現了跨領域學習的彈性、技術與美學結合的能力，以及在多元環境中時間管理與技能協調的效率。
+</h2>
+    </section>
+    <br><br><hr color="rgb(8, 68, 44)">
+    
+    <section id="callme">
+        <h1>聯絡資訊</h1>
+        <a href="https://line.me/ti/p/utxqDaC4-q" target="_blank">&nbsp Line &nbsp</a>
+        <a href="https://www.instagram.com/v03.su?igsh=eHpiaHRuN3ZzYWl5&utm_source=qr" target="_blank">&nbsp Instergram &nbsp</a>
+        <a href="https://contacts.google.com/?authuser=0" target="_blank">&nbsp Gmail &nbsp</a>
+    </section>
+
+
+</main>
+</body>
+</html>

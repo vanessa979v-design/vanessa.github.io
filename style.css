@@ -1,0 +1,40 @@
+body {
+    background-color:lightyellow;
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(33, 98, 72);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    padding: 4px 0;
+}
+
+main{
+    color: rgb(8, 68, 44);
+    font-family: 微軟正黑體;
+}
+nav{
+    background-color: rgb(185, 209, 187);
+    text-align: center;
+}
+nav a {
+    color: rgb(8, 68, 44);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 5px;
+    display: inline-block;
+    font-size:20px;
+}
+nav a:hover {
+    color: white; 
+    background-color: rgb(8, 68, 44, 0.8); 
+    text-decoration: underline;
+    font-size:25px ; 
+}
